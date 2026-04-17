@@ -1,0 +1,24 @@
+{
+    "name": "Elementary School Learning Hub",
+    "short_name": "Learning Hub",
+    "description": "Offline-capable student learning hub for elementary schools",
+    "start_url": "/dashboard",
+    "display": "standalone",
+    "background_color": "#fefefe",
+    "theme_color": "#1a4731",
+    "orientation": "landscape",
+    "icons": [
+        {
+            "src": "/icons/icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

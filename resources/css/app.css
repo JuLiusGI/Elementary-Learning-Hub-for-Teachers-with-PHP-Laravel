@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: #1a4731;
+        --secondary: #f5e6cc;
+        --accent: #ff6b6b;
+        --background: #fefefe;
+        --text-dark: #333333;
+        --text-light: #666666;
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide navigation and UI chrome */
+    aside,
+    nav,
+    .no-print,
+    button[type="submit"],
+    a[href*="create"],
+    a[href*="edit"],
+    form[method="POST"],
+    [x-cloak] {
+        display: none !important;
+    }
+
+    /* Remove sidebar offset */
+    .ml-64 {
+        margin-left: 0 !important;
+    }
+
+    /* Clean backgrounds */
+    body, .bg-\[\#fefefe\], .bg-white {
+        background: white !important;
+    }
+
+    /* Remove shadows and borders */
+    .shadow, .shadow-sm, .shadow-md, .shadow-lg {
+        box-shadow: none !important;
+    }
+
+    /* Fit tables to page */
+    table {
+        width: 100% !important;
+        font-size: 11px;
+    }
+
+    /* Page break handling */
+    .page-break-before {
+        page-break-before: always;
+    }
+
+    .page-break-after {
+        page-break-after: always;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    /* Ensure text is dark for print */
+    * {
+        color: #000 !important;
+    }
+
+    /* Show full URLs for links */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 9px;
+        color: #666 !important;
+    }
+}
